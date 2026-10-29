@@ -1,0 +1,9 @@
+project: savantenvs/qtpass
+target: fuzz_gpgcolon
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gpgcolon/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gpgcolon
+    libfuzzer: true
+    timeout: 5

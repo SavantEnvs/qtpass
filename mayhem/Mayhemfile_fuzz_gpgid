@@ -1,0 +1,9 @@
+project: savantenvs/qtpass
+target: fuzz_gpgid
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gpgid/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gpgid
+    libfuzzer: true
+    timeout: 5
